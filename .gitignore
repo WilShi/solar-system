@@ -1,0 +1,23 @@
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ---- logs & local data ----
+*.log
+logs/
+tmp/
+
+# ---- build output (project is build-free, kept for future tooling) ----
+dist/
+node_modules/
+
+# ---- archives ----
+*.zip
+*.7z
+*.tar.gz
+*.tgz

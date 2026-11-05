@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交互式3D点阵云银河系</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="loading-container">
+            <div id="loading-text">正在加载...</div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info-panel">
+        <button id="close-panel-btn"><i class="fas fa-times"></i></button>
+        <h2 id="planet-title"></h2>
+        <div id="planet-stats"></div>
+        <div id="planet-description"></div>
+    </div>
+
+    <div id="controls">
+        <button id="toggle-arms-btn" class="control-btn active" title="显示/隐藏旋臂"><i class="fas fa-circle-notch"></i></button>
+        <button id="cruise-mode-btn" class="control-btn" title="漫游模式"><i class="fas fa-rocket"></i></button>
+        <button id="research-mode-btn" class="control-btn" title="科研模式"><i class="fas fa-microscope"></i></button>
+        <button id="time-travel-btn" class="control-btn" title="时间轴模式"><i class="fas fa-clock"></i></button>
+        <div class="control-group">
+            <label for="speed-slider">时间速度</label>
+            <input type="range" id="speed-slider" min="0" max="10" value="1" step="0.1">
+            <span id="speed-value">1x</span>
+        </div>
+        <div class="control-group">
+            <label for="density-slider">点阵密度</label>
+            <input type="range" id="density-slider" min="0.1" max="3" value="1" step="0.1">
+            <span id="density-value">1x</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script src="galaxy.js"></script>
+</body>
+</html>
